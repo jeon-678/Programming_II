@@ -9,3 +9,42 @@
 등차수열: 1 6 11 16 21 26 31 36 41 46
 
 */
+
+#include <stdio.h>
+
+void input();
+void common_difference(int a, int b);
+
+int main(){
+
+    input();
+
+    return 0;
+}
+
+void input(){
+
+    int a, d;
+
+    printf("첫 번째 항? ");
+    scanf("%d", &a);
+
+    printf("공차? ");
+    scanf("%d", &d);
+
+    common_difference(a, d);
+}
+
+void common_difference(int a, int b){
+
+    #define SIZE 10
+
+    int arr[SIZE] = { 0 };
+
+    printf("등차수열: ");
+
+    for(int i = 0; i < SIZE; i++){
+        arr[i] = a + (b * i);
+        printf("%d ", arr[i]);
+    }
+}
