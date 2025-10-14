@@ -7,3 +7,33 @@
 배열의 원소에 저장할 값? [ 5 ]
 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
 */
+
+#include <stdio.h>
+
+void fill_array(int *p, const int size, int num);
+void input();
+
+int main(){
+
+    input();
+
+    return 0;
+}
+
+void input(){
+
+    int a, b, arr[20] = { 0 };
+
+    printf("배열을 어떤 숫자로 얼만큼 채울까요? 최대는 20개입니다. ");
+    scanf("%d %d", &a, &b);
+
+    fill_array(arr, b, a);
+}
+
+void fill_array(int *p, const int size, int num){
+
+    for(int i = 0; i < size; i++){
+        *(p + i) = num;
+        printf("%d ", *(p + i));
+    }
+}
