@@ -3,7 +3,6 @@
 DATE 구조체와 print_data 함수를 이용해서 입력받은 날짜를 출력하는 프로그램을 작성하시오.
 
 실행결과
-
 연? [ 2019 ]
 월? [ 1 ]
 일? [ 1 ]
@@ -18,34 +17,26 @@ typedef struct date{
     int day;
 } DATE;
 
-void input();
 void print_date(DATE *p);
 
 int main(){
 
-    input();
+    DATE input;
+
+    printf("연? ");
+    scanf("%d", &input.year);
+    printf("월? ");
+    scanf("%d", &input.month);
+    printf("일? ");
+    scanf("%d", &input.day);
+
+    print_date(&input);
 
     return 0;
 }
 
-void input(){
-
-    DATE d;
-
-    printf("연? ");
-    scanf("%d", &d.year);
-
-    printf("월? ");
-    scanf("%d", &d.month);
-
-    printf("일? ");
-    scanf("%d", &d.day);
-
-    print_date(&d);
-}
-
 void print_date(DATE *p){
 
-    printf("%d / %d / %d", p->year, p->month, p->day);
+printf("%d / %d / %d", p->year, p->month, p->day);
 
 }
