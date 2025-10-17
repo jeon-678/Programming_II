@@ -21,6 +21,12 @@ d = today->tm_mday;					// tm_mday 멤버: 1~31사이의 값
 #include <stdio.h>
 #include <time.h>
 
+typedef struct date{
+    int year;
+    int month;
+    int day;
+} DATE;
+
 int main(){
 
     return 0;
@@ -33,5 +39,5 @@ void set_as_today(){
 
 void print_date(){
 
-    
+
 }
